@@ -5,7 +5,10 @@ const parent=document.querySelector(".parent");
 let userinput;
 
 const todo=()=>{
-    userinput=input.value;
+    if(input.value.trim()===""){
+        alert("Enter Your Task.")
+    }else{
+        userinput=input.value;
     const creation=()=>{
 
         const li=document.createElement("li");
@@ -46,6 +49,7 @@ const todo=()=>{
         appending();
     }
     creation();
+}
 }
 addbtn.addEventListener("click",todo);
 
